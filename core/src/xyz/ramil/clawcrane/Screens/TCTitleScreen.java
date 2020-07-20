@@ -16,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 
 public class TCTitleScreen implements Screen {
@@ -27,7 +28,7 @@ public class TCTitleScreen implements Screen {
     private Game game;
     private OrthographicCamera camera;
     private SpriteBatch batch;
-    private FitViewport viewp;
+    private StretchViewport viewp;
     private Skin buttonPlaySkin;
     private Skin buttonSoundSkin;
     private Skin buttonmtSkin;
@@ -81,9 +82,8 @@ public class TCTitleScreen implements Screen {
 
         //----------------create camera----------------------------
         camera = new OrthographicCamera();
-        camera.setToOrtho(false, 136, 204);
         batch = new SpriteBatch();
-        viewp = new FitViewport(136, 204, camera);
+        viewp = new StretchViewport(136, 204, camera);
         batch = new SpriteBatch();
         stage = new Stage(viewp, batch);
         //------------------Font---------------------------
@@ -309,31 +309,6 @@ public class TCTitleScreen implements Screen {
     }
 
 
-    private void ButtonNew() {
-
-        buttonnew.addListener(new InputListener() {
-            @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                super.touchUp(event, x, y, pointer, button);
-
-                game.setScreen(new TCAdditionalToy(game));
-
-
-                //  playServices.showScore();
-
-            }
-
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (getSoundState()) {
-                    menu.play();
-                }
-
-                return true;
-            }
-
-        });
-    }
 
 
     private void ButtonSound() {

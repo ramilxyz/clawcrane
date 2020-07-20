@@ -23,6 +23,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Timer;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 import java.util.Random;
 
@@ -46,7 +47,7 @@ public class TCGameScreen implements Screen {
     private Box2DDebugRenderer debugRenderer;
     private OrthographicCamera camera;
     private SpriteBatch batch;
-    private FitViewport viewp;
+    private StretchViewport viewp;
     private TCBox box;
     private TCEdge tcEdge;
     private Texture bearTextuere,
@@ -158,9 +159,8 @@ public class TCGameScreen implements Screen {
 
         //----------------create camera----------------------------
         camera = new OrthographicCamera();
-        camera.setToOrtho(false, 136, 204);
         batch = new SpriteBatch();
-        viewp = new FitViewport(136, 204, camera);
+        viewp = new StretchViewport(136, 204, camera);
         batch = new SpriteBatch();
         stage = new Stage(viewp, batch);
 
