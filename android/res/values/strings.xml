@@ -2,5 +2,7 @@
 <resources>
 
     <string name="app_name">Claw Crane</string>
+    <string name="app_ads_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
 
 </resources>

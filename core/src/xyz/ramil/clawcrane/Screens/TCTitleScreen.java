@@ -110,38 +110,7 @@ public class TCTitleScreen implements Screen {
         buttonPlay.setBounds(53, 120, 30, 30);
         //--------------------------------------------------------------
 
-        //--------------------Button More Toys------------------------------
-        buttonmtSkin = new Skin();
-        buttonmtSkin.add("button_moretoys_up", new Texture("button_moretoys_up.png"));
-        buttonmtSkin.add("button_moretoys_down", new Texture("button_moretoys_down.png"));
-        buttonmtStyle = new Button.ButtonStyle();
-        buttonmtStyle.up = buttonmtSkin.getDrawable("button_moretoys_up");
-        buttonmtStyle.down = buttonmtSkin.getDrawable("button_moretoys_down");
-        buttonmt = new Button(buttonmtStyle);
-        buttonmt.setBounds(100, 60, 30, 30);
-        //--------------------------------------------------------------
 
-        //--------------------Button Highscores------------------------------
-        buttonhsSkin = new Skin();
-        buttonhsSkin.add("button_hs_up", new Texture("button_hs_up.png"));
-        buttonhsSkin.add("button_hs_down", new Texture("button_hs_down.png"));
-        buttonhsStyle = new Button.ButtonStyle();
-        buttonhsStyle.up = buttonhsSkin.getDrawable("button_hs_up");
-        buttonhsStyle.down = buttonhsSkin.getDrawable("button_hs_down");
-        buttonhs = new Button(buttonhsStyle);
-        buttonhs.setBounds(33, 35, 71, 20);
-        //--------------------------------------------------------------
-
-        //--------------------Button achievement------------------------------
-        buttonachSkin = new Skin();
-        buttonachSkin.add("button_ach_up", new Texture("button_ach_up.png"));
-        buttonachSkin.add("button_ach_down", new Texture("button_ach_down.png"));
-        buttonachStyle = new Button.ButtonStyle();
-        buttonachStyle.up = buttonachSkin.getDrawable("button_ach_up");
-        buttonachStyle.down = buttonachSkin.getDrawable("button_ach_down");
-        buttonach = new Button(buttonachStyle);
-        buttonach.setBounds(33, 59, 71, 20);
-        //--------------------------------------------------------------
 
         //--------------------Button quit------------------------------
         buttonqSkin = new Skin();
@@ -154,16 +123,7 @@ public class TCTitleScreen implements Screen {
         buttonq.setBounds(50, 11, 39, 20);
         //--------------------------------------------------------------
 
-        //--------------------Button new------------------------------
-        buttonnewSkin = new Skin();
-        buttonnewSkin.add("button_new_up", new Texture("chest.png"));
-        buttonnewSkin.add("button_new_down", new Texture("chest.png"));
-        buttonnewStyle = new Button.ButtonStyle();
-        buttonnewStyle.up = buttonnewSkin.getDrawable("button_new_up");
-        buttonnewStyle.down = buttonnewSkin.getDrawable("button_new_down");
-        buttonnew = new Button(buttonnewStyle);
-        buttonnew.setBounds(80, 10, 50, 38);
-        //--------------------------------------------------------------
+
 
 
         //--------------------Add actor-------------------------
@@ -172,7 +132,6 @@ public class TCTitleScreen implements Screen {
 
         ButtonPlay();
         ButtonSound();
-        ButtonMoreToys();
         ButtonQ();
 
         Gdx.input.setInputProcessor(stage);
