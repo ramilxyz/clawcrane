@@ -93,7 +93,7 @@ public class TCGameScreen implements Screen {
     public TCGameScreen(Game aGame) {
 
 
-        Sprite sprite = new Sprite(new Texture("background.png"));
+        Sprite sprite = new Sprite(new Texture("background_1.png"));
         sprite.setPosition(30, 30);
 
 
@@ -153,7 +153,7 @@ public class TCGameScreen implements Screen {
         world = new World(new Vector2(0, -100), true);
         world.setContactListener(new TCContactListener(world));
 
-        backgroundTexture = new Texture(Gdx.files.internal("background.png"));
+        backgroundTexture = new Texture(Gdx.files.internal("background_1.png"));
         backgroundTexture_1 = new Texture(Gdx.files.internal("background_1.png"));
 
 
@@ -183,23 +183,23 @@ public class TCGameScreen implements Screen {
         //------------------Font---------------------------
         bitmapFont = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
-        bitmapFont.setColor(204, 150, 0, 1);
+        bitmapFont.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFonths = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFonths.setColor(204, 150, 0, 1);
+        bitmapFonths.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFontwhite = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
-        bitmapFontwhite.setColor(255, 255, 255, 1);
+        bitmapFontwhite.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFonthswhite = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFonthswhite.setColor(255, 255, 255, 1);
+        bitmapFonthswhite.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFonthsclick = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFonthsclick.setColor(255, 255, 255, 1);
+        bitmapFonthsclick.setColor(0, 111/255f, 255/255f, 1);
         //-----------------Touchpad------------------------
         touchSkin = new Skin();
         touchSkin.add("touchBackground", new Texture("touchpad_b.png"));
@@ -824,7 +824,7 @@ public class TCGameScreen implements Screen {
         if (clicks < 4) {
             bitmapFonthsclick.setColor(255, 0, 0, 1);
         } else {
-            bitmapFonthsclick.setColor(255, 255, 255, 1);
+            bitmapFonthsclick.setColor(0, 111/255f, 255/255f, 1);
 
         }
 

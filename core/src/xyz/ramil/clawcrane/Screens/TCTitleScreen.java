@@ -78,7 +78,7 @@ public class TCTitleScreen implements Screen {
 
         game = aGame;
 
-        backgroundTexture = new Texture(Gdx.files.internal("background_title.png"));
+        backgroundTexture = new Texture(Gdx.files.internal("background_1.png"));
 
         //----------------create camera----------------------------
         camera = new OrthographicCamera();
@@ -93,11 +93,11 @@ public class TCTitleScreen implements Screen {
 
         bitmapFontHS = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFontHS.setColor(0, 217, 255/255f, 1);
+        bitmapFontHS.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFontHSwhite = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFontHSwhite.setColor(255, 255, 255, 1);
+        bitmapFontHSwhite.setColor(0, 111/255f, 255/255f, 1);
 
         //--------------------Button Play------------------------------
         buttonPlaySkin = new Skin();
