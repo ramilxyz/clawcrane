@@ -16,8 +16,6 @@ import xyz.ramil.clawcrane.Screens.TCTitleScreen;
 public class TCContactListener implements ContactListener {
     public static Preferences prefs;
     private World world;
-    private TCGameScreen generate;
-
 
     public TCContactListener(World world) {
         super();
@@ -42,8 +40,8 @@ public class TCContactListener implements ContactListener {
         String classA = contact.getFixtureA().getBody().getUserData().getClass().getName();
         String classB = contact.getFixtureB().getBody().getUserData().getClass().getName();
 
-        //Gdx.app.debug("begin Contact","between: "+classA+" and "+ classB);
-        if (classA.equalsIgnoreCase("xyz.ramil.toycrane.Bodies.TCBasket") && classB.equalsIgnoreCase("xyz.ramil.toycrane.Bodies.TCToys")) {
+
+        if (classA.equalsIgnoreCase("xyz.ramil.clawcrane.Bodies.TCBasket") && classB.equalsIgnoreCase("xyz.ramil.clawcrane.Bodies.TCToys")) {
             TCToys a = (TCToys) (contact.getFixtureB().getBody().getUserData());
             a.destroy();
             Gdx.app.log("", "contact");
@@ -54,7 +52,7 @@ public class TCContactListener implements ContactListener {
                 TCTitleScreen.score.play();
             }
 
-        } else if (classB.equalsIgnoreCase("xyz.ramil.toycrane.Bodies.TCBasket") && classA.equalsIgnoreCase("cxyz.ramil.toycrane.Bodies.TCToys")) {
+        } else if (classB.equalsIgnoreCase("xyz.ramil.clawcrane.Bodies.TCBasket") && classA.equalsIgnoreCase("xyz.ramil.clawcrane.Bodies.TCToys")) {
             TCToys a = (TCToys) (contact.getFixtureA().getBody().getUserData());
             a.destroy();
             Gdx.app.log("", "contact");

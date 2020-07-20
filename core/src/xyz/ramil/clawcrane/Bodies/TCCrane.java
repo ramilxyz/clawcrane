@@ -19,7 +19,6 @@ public class TCCrane extends Image {
     public float gx, gy;
     public RevoluteJointDef revoluteJointDef, revoluteJointDef2;
     public RevoluteJoint rrevoluteJoint, lrevoluteJoint;
-    public float vertspeed, horizspeed;
     private Body myBodyA, myBodyB, myBodyC, myBodyD, myBodyE, myBodyF;
     private Image myBodyATexture, myBodyBTexture, myBodyCTexture,
             myBodyDTexture, myBodyETexture, myBodyFTexture;
@@ -30,7 +29,7 @@ public class TCCrane extends Image {
         this.gx = gx;
         this.gy = gy;
         world = aWorld;
-//========================================================
+
         myBodyATexture = new Image(new Texture(Gdx.files.internal("metal_h.png")));
         myBodyATexture.setSize(16, 4);
 

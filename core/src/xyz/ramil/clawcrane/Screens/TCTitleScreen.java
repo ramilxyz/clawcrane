@@ -168,22 +168,13 @@ public class TCTitleScreen implements Screen {
 
         //--------------------Add actor-------------------------
         stage.addActor(buttonPlay);
-        // stage.addActor(buttonmt);
-        stage.addActor(buttonhs);
-        stage.addActor(buttonach);
-        //    stage.addActor(buttonq);
-        //    stage.addActor(buttonnew);
 
         ButtonPlay();
         ButtonSound();
         ButtonMoreToys();
-        ButtonHS();
-        ButtonAch();
-        // ButtonQ();
-        //   ButtonNew();
 
         Gdx.input.setInputProcessor(stage);
-        //  playServices.submitScore(getHighScore());
+
 
     }
 
@@ -307,8 +298,6 @@ public class TCTitleScreen implements Screen {
 
         });
     }
-
-
 
 
     private void ButtonSound() {
