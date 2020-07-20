@@ -89,11 +89,11 @@ public class TCTitleScreen implements Screen {
         //------------------Font---------------------------
         bitmapFont = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
-        bitmapFont.setColor(204, 150, 0, 1);
+        bitmapFont.setColor(0, 111/255f, 255/255f, 1);
 
         bitmapFontHS = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
-        bitmapFontHS.setColor(204, 150, 0, 1);
+        bitmapFontHS.setColor(0, 217, 255/255f, 1);
 
         bitmapFontHSwhite = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
                 Gdx.files.internal("font/highscore/text.png"), false);
@@ -151,7 +151,7 @@ public class TCTitleScreen implements Screen {
         buttonqStyle.up = buttonqSkin.getDrawable("button_q_up");
         buttonqStyle.down = buttonqSkin.getDrawable("button_q_down");
         buttonq = new Button(buttonqStyle);
-        buttonq.setBounds(26, 11, 29, 20);
+        buttonq.setBounds(50, 11, 39, 20);
         //--------------------------------------------------------------
 
         //--------------------Button new------------------------------
@@ -168,10 +168,12 @@ public class TCTitleScreen implements Screen {
 
         //--------------------Add actor-------------------------
         stage.addActor(buttonPlay);
+        stage.addActor(buttonq);
 
         ButtonPlay();
         ButtonSound();
         ButtonMoreToys();
+        ButtonQ();
 
         Gdx.input.setInputProcessor(stage);
 
@@ -216,14 +218,13 @@ public class TCTitleScreen implements Screen {
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 super.touchUp(event, x, y, pointer, button);
 
+                Gdx.app.exit();
+
 
             }
 
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (getSoundState()) {
-                    menu.play();
-                }
 
                 return true;
             }
@@ -379,7 +380,7 @@ public class TCTitleScreen implements Screen {
         }
 
 
-        bitmapFont.draw(batch, "TOY CRANE", 18, 180);
+        bitmapFont.draw(batch, "CLAW CRANE", 16, 180);
         bitmapFontHSwhite.draw(batch, "HIGH", 24, 110);
         bitmapFontHS.draw(batch, "SCORE: " + getHighScore(), -tctextx, 95);
         //   bitmapFontHSwhite.draw(batch, "LEVEL", 87, 77);
