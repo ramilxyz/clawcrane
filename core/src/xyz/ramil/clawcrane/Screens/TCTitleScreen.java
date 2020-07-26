@@ -89,14 +89,18 @@ public class TCTitleScreen implements Screen {
         //------------------Font---------------------------
         bitmapFont = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFont.getData().setScale(0.60f);
+
         bitmapFont.setColor(0, 111/255f, 255/255f, 1);
 
-        bitmapFontHS = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
-                Gdx.files.internal("font/highscore/text.png"), false);
+        bitmapFontHS = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+                Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFontHS.getData().setScale(0.4f);
         bitmapFontHS.setColor(0, 111/255f, 255/255f, 1);
 
-        bitmapFontHSwhite = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
-                Gdx.files.internal("font/highscore/text.png"), false);
+        bitmapFontHSwhite = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+                Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFontHSwhite.getData().setScale(0.4f);
         bitmapFontHSwhite.setColor(0, 111/255f, 255/255f, 1);
 
         //--------------------Button Play------------------------------
@@ -339,7 +343,7 @@ public class TCTitleScreen implements Screen {
         }
 
 
-        bitmapFont.draw(batch, "CLAW CRANE", 16, 180);
+        bitmapFont.draw(batch, "CLAW CRANE", 6, 180);
         bitmapFontHSwhite.draw(batch, "HIGH", 24, 110);
         bitmapFontHS.draw(batch, "SCORE: " + getHighScore(), -tctextx, 95);
         //   bitmapFontHSwhite.draw(batch, "LEVEL", 87, 77);

@@ -183,23 +183,28 @@ public class TCGameScreen implements Screen {
         //------------------Font---------------------------
         bitmapFont = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFont.getData().setScale(0.5f);
         bitmapFont.setColor(0, 111/255f, 255/255f, 1);
 
-        bitmapFonths = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
-                Gdx.files.internal("font/highscore/text.png"), false);
+        bitmapFonths = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+                Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFonths.getData().setScale(0.5f);
         bitmapFonths.setColor(0, 111/255f, 255/255f, 1);
 
-        bitmapFontwhite = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+        bitmapFontwhite =  new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
+        bitmapFontwhite.getData().setScale(0.5f);
         bitmapFontwhite.setColor(0, 111/255f, 255/255f, 1);
 
-        bitmapFonthswhite = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
-                Gdx.files.internal("font/highscore/text.png"), false);
+        bitmapFonthswhite =  new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+                Gdx.files.internal("font/bigfont/text.png"), false);
         bitmapFonthswhite.setColor(0, 111/255f, 255/255f, 1);
+        bitmapFonthswhite.getData().setScale(0.5f);
 
-        bitmapFonthsclick = new BitmapFont(Gdx.files.internal("font/highscore/text.fnt"),
-                Gdx.files.internal("font/highscore/text.png"), false);
+        bitmapFonthsclick =  new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
+                Gdx.files.internal("font/bigfont/text.png"), false);
         bitmapFonthsclick.setColor(0, 111/255f, 255/255f, 1);
+        bitmapFonthsclick.getData().setScale(0.5f);
         //-----------------Touchpad------------------------
         touchSkin = new Skin();
         touchSkin.add("touchBackground", new Texture("touchpad_b.png"));
