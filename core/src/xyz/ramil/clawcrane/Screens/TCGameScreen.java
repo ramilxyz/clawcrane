@@ -843,11 +843,11 @@ public class TCGameScreen implements Screen {
 
         stage.getBatch().begin();
 
-        bitmapFont.draw(batch, "SCORE ", 5, 203);
+        bitmapFont.draw(batch, "SCORE ", 5, 200);
         bitmapFonths.draw(batch, "" + score, 5, 185);
 
         bitmapFontwhite.draw(batch, "CLICKS " +
-                "" + clicks, 70, 203);
+                "" + clicks, 70, 200);
         bitmapFonthsclick.draw(batch, "" + clicks, 70, 185);
 
 

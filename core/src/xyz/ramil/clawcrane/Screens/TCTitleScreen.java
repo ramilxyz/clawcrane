@@ -343,7 +343,7 @@ public class TCTitleScreen implements Screen {
         }
 
 
-        bitmapFont.draw(batch, "CLAW CRANE", 6, 180);
+        bitmapFont.draw(batch, "CLAW CRANE", 6, 190);
         bitmapFontHSwhite.draw(batch, "HIGH", 24, 110);
         bitmapFontHS.draw(batch, "SCORE: " + getHighScore(), -tctextx, 95);
         //   bitmapFontHSwhite.draw(batch, "LEVEL", 87, 77);
