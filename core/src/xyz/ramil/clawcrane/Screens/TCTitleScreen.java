@@ -124,7 +124,7 @@ public class TCTitleScreen implements Screen {
         buttonqStyle.up = buttonqSkin.getDrawable("button_q_up");
         buttonqStyle.down = buttonqSkin.getDrawable("button_q_down");
         buttonq = new Button(buttonqStyle);
-        buttonq.setBounds(53, 20, 30, 30);
+        buttonq.setBounds(58, 35, 20, 20);
         //--------------------------------------------------------------
 
 
