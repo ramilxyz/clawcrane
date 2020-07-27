@@ -12,11 +12,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import xyz.ramil.clawcrane.BodyEditorLoader;
 
-
-/**
- * Created by julienvillegas on 01/02/2017.
- */
-
 public class TCBox extends Image {
 
     private Body body;

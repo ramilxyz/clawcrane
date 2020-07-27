@@ -11,16 +11,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
 import xyz.ramil.clawcrane.Screens.TCTitleScreen;
 
-
 public class ClawCrane extends Game {
     public static Label.LabelStyle labelStyle;
 
-
     @Override
     public void create() {
-
-
-        // parameters for generating a custom bitmap font
         FreeTypeFontGenerator fontGenerator =
                 new FreeTypeFontGenerator(Gdx.files.internal("OpenSans.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter fontParameters = new FreeTypeFontGenerator.FreeTypeFontParameter();
@@ -39,6 +34,4 @@ public class ClawCrane extends Game {
         this.setScreen(new TCTitleScreen(this));
 
     }
-
-
 }

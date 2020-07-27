@@ -29,7 +29,6 @@ public class TCToys extends Image {
         world = aWorld;
         BodyEditorLoader loader = new BodyEditorLoader(Gdx.files.internal(BELfile));
 
-
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.DynamicBody;
         bodyDef.position.set(this.getX(), this.getY());
@@ -46,15 +45,11 @@ public class TCToys extends Image {
         this.setOrigin(this.getWidth() / 2, this.getHeight() / 2);
         body.setAngularVelocity(3);
         body.setUserData(this);
-
-
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-
-
     }
 
     @Override
@@ -62,7 +57,7 @@ public class TCToys extends Image {
         super.act(delta);
         if (delete) {
             world.destroyBody(body);
-            this.remove();
+            TCToys.super.remove();
         }
         this.setRotation(body.getAngle() * MathUtils.radiansToDegrees);
         this.setPosition(body.getPosition().x - this.getWidth() / 2, body.getPosition().y - this.getHeight() / 2);
@@ -71,11 +66,5 @@ public class TCToys extends Image {
 
     public void destroy() {
         delete = true;
-
-    }
-
-
-    public Body getBody() {
-        return body;
     }
 }

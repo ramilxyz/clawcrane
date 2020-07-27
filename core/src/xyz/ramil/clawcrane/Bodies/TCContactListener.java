@@ -62,11 +62,7 @@ public class TCContactListener implements ContactListener {
             if (getSoundState()) {
                 TCTitleScreen.score.play();
             }
-
-
         }
-
-
     }
 
     @Override
@@ -93,8 +89,6 @@ public class TCContactListener implements ContactListener {
             body = arg0.getFixtureB().getBody();
 
         if (body != null) {
-
-
             body.setActive(false);
             world.destroyBody(body);
         }

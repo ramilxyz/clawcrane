@@ -15,7 +15,6 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 
@@ -31,25 +30,17 @@ public class TCTitleScreen implements Screen {
     private StretchViewport viewp;
     private Skin buttonPlaySkin;
     private Skin buttonSoundSkin;
-    private Skin buttonmtSkin;
-    private Skin buttonhsSkin;
-    private Skin buttonachSkin;
+
     private Skin buttonqSkin;
-    private Skin buttonnewSkin;
     private Button.ButtonStyle buttonPlayStyle;
     private Button.ButtonStyle buttonSoundStyle;
-    private Button.ButtonStyle buttonmtStyle;
-    private Button.ButtonStyle buttonhsStyle;
-    private Button.ButtonStyle buttonachStyle;
+
     private Button.ButtonStyle buttonqStyle;
-    private Button.ButtonStyle buttonnewStyle;
     private Button buttonPlay;
     private Button buttonSound;
-    private Button buttonmt;
-    private Button buttonhs;
-    private Button buttonach;
+
     private Button buttonq;
-    private Button buttonnew;
+
     private Texture backgroundTexture;
     private BitmapFont bitmapFont, bitmapFontHS, bitmapFontHSwhite;
 
@@ -58,12 +49,10 @@ public class TCTitleScreen implements Screen {
 
         tctextx = 0;
 
-
         menu = Gdx.audio.newSound(Gdx.files.internal("sound/menu.wav"));
         toy = Gdx.audio.newSound(Gdx.files.internal("sound/toy.wav"));
         score = Gdx.audio.newSound(Gdx.files.internal("sound/score.wav"));
         gameover = Gdx.audio.newSound(Gdx.files.internal("sound/gameover.wav"));
-
 
         prefs = Gdx.app.getPreferences("ToyCrane");
 
@@ -74,7 +63,6 @@ public class TCTitleScreen implements Screen {
         if (!prefs.contains("highScore")) {
             prefs.putInteger("highScore", 0);
         }
-
 
         game = aGame;
 
@@ -91,17 +79,17 @@ public class TCTitleScreen implements Screen {
                 Gdx.files.internal("font/bigfont/text.png"), false);
         bitmapFont.getData().setScale(0.60f);
 
-        bitmapFont.setColor(0, 111/255f, 255/255f, 1);
+        bitmapFont.setColor(0, 111 / 255f, 255 / 255f, 1);
 
         bitmapFontHS = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
         bitmapFontHS.getData().setScale(0.4f);
-        bitmapFontHS.setColor(0, 111/255f, 255/255f, 1);
+        bitmapFontHS.setColor(0, 111 / 255f, 255 / 255f, 1);
 
         bitmapFontHSwhite = new BitmapFont(Gdx.files.internal("font/bigfont/text.fnt"),
                 Gdx.files.internal("font/bigfont/text.png"), false);
         bitmapFontHSwhite.getData().setScale(0.4f);
-        bitmapFontHSwhite.setColor(0, 111/255f, 255/255f, 1);
+        bitmapFontHSwhite.setColor(0, 111 / 255f, 255 / 255f, 1);
 
         //--------------------Button Play------------------------------
         buttonPlaySkin = new Skin();
@@ -114,8 +102,6 @@ public class TCTitleScreen implements Screen {
         buttonPlay.setBounds(53, 120, 30, 30);
         //--------------------------------------------------------------
 
-
-
         //--------------------Button quit------------------------------
         buttonqSkin = new Skin();
         buttonqSkin.add("button_q_up", new Texture("button_q_up.png"));
@@ -127,9 +113,6 @@ public class TCTitleScreen implements Screen {
         buttonq.setBounds(58, 35, 20, 20);
         //--------------------------------------------------------------
 
-
-
-
         //--------------------Add actor-------------------------
         stage.addActor(buttonPlay);
         stage.addActor(buttonq);
@@ -140,9 +123,7 @@ public class TCTitleScreen implements Screen {
 
         Gdx.input.setInputProcessor(stage);
 
-
     }
-
 
     public static int getHighScore() {
         return prefs.getInteger("highScore");
@@ -180,89 +161,16 @@ public class TCTitleScreen implements Screen {
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 super.touchUp(event, x, y, pointer, button);
-
                 Gdx.app.exit();
-
-
             }
 
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-
                 return true;
             }
 
         });
     }
-
-    private void ButtonAch() {
-
-        buttonach.addListener(new InputListener() {
-            @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                super.touchUp(event, x, y, pointer, button);
-
-
-            }
-
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (getSoundState()) {
-                    menu.play();
-                }
-
-                return true;
-            }
-
-        });
-    }
-
-
-    private void ButtonHS() {
-
-        buttonhs.addListener(new InputListener() {
-            @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                super.touchUp(event, x, y, pointer, button);
-
-
-            }
-
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (getSoundState()) {
-                    menu.play();
-                }
-
-                return true;
-            }
-
-        });
-    }
-
-    private void ButtonMoreToys() {
-
-        buttonmt.addListener(new InputListener() {
-            @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                super.touchUp(event, x, y, pointer, button);
-
-                //  playServices.showScore();
-
-            }
-
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (getSoundState()) {
-                    menu.play();
-                }
-
-                return true;
-            }
-
-        });
-    }
-
 
     private void ButtonSound() {
         Gdx.app.log("", "" + getSoundState());
@@ -311,7 +219,6 @@ public class TCTitleScreen implements Screen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
 
-
                 return true;
             }
 
@@ -331,29 +238,21 @@ public class TCTitleScreen implements Screen {
 
         stage.getBatch().begin();
         stage.getBatch().draw(backgroundTexture, 0, 0, 143, 204);
-
-
         stage.getBatch().end();
-
-
         stage.getBatch().begin();
+
         tctextx = tctextx + 1;
         if (tctextx == 80) {
             tctextx = -160;
         }
 
-
         bitmapFont.draw(batch, "CLAW CRANE", 6, 190);
         bitmapFontHSwhite.draw(batch, "HIGH", 24, 110);
         bitmapFontHS.draw(batch, "SCORE: " + getHighScore(), -tctextx, 95);
-        //   bitmapFontHSwhite.draw(batch, "LEVEL", 87, 77);
-        //  bitmapFontHS.draw(batch, "1", 103, 62);
-
 
         stage.getBatch().end();
         stage.act(Gdx.graphics.getDeltaTime());
         stage.draw();
-
 
     }
 
@@ -381,8 +280,6 @@ public class TCTitleScreen implements Screen {
 
     @Override
     public void dispose() {
-
-
         stage.dispose();
         menu.dispose();
         toy.dispose();
@@ -393,17 +290,8 @@ public class TCTitleScreen implements Screen {
         bitmapFontHSwhite.dispose();
         backgroundTexture.dispose();
         game.dispose();
-
         buttonPlaySkin.dispose();
         buttonSoundSkin.dispose();
-        buttonmtSkin.dispose();
-
-        buttonhsSkin.dispose();
-        buttonachSkin.dispose();
         buttonqSkin.dispose();
-
-
     }
-
-
 }

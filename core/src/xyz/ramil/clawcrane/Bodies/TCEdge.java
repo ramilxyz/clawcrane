@@ -20,17 +20,13 @@ public class TCEdge extends Image {
         myBodyDefA.position.set(0, 0);
         myBodyA = world.createBody(myBodyDefA);
 
-
         rightEdge();
         leftEdge();
         topEdge();
         myBodyA.setUserData("edge");
-
-
     }
 
     private void rightEdge() {
-
         EdgeShape shape = new EdgeShape();
         shape.set(new Vector2(135, 90), new Vector2(135, 203));
         FixtureDef fixtureDef = new FixtureDef();
@@ -42,12 +38,9 @@ public class TCEdge extends Image {
         myBodyA.setLinearVelocity(0, 0);
         myBodyA.setUserData("redge");
         shape.dispose();
-
-
     }
 
     private void leftEdge() {
-
         EdgeShape shape = new EdgeShape();
         shape.set(new Vector2(1, 30), new Vector2(1, 203));
         FixtureDef fixtureDef = new FixtureDef();
@@ -59,7 +52,6 @@ public class TCEdge extends Image {
         myBodyA.setLinearVelocity(0, 0);
         myBodyA.setUserData("ledge");
         shape.dispose();
-
     }
 
     private void topEdge() {
@@ -78,8 +70,5 @@ public class TCEdge extends Image {
         myBodyA.setLinearVelocity(0, 0);
         myBodyA.setUserData("ledge");
         shape.dispose();
-
     }
-
-
 }

@@ -12,7 +12,6 @@ public class TCBasket extends Image {
     private Body myBodyA;
 
     public TCBasket(World world) {
-
         aWorld = world;
         BodyDef myBodyDefA = new BodyDef();
         myBodyDefA.type = BodyDef.BodyType.StaticBody;
@@ -25,12 +24,7 @@ public class TCBasket extends Image {
         fixtureDef.restitution = 0f;
         myBodyA.createFixture(shape, 1.0f);
 
-
         shape.dispose();
         myBodyA.setUserData(this);
-    }
-
-    public Body getMyBodyA() {
-        return myBodyA;
     }
 }

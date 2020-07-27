@@ -32,9 +32,7 @@ public class TCCrane extends Image {
 
         myBodyATexture = new Image(new Texture(Gdx.files.internal("metal_h.png")));
         myBodyATexture.setSize(16, 4);
-
         myBodyATexture.setPosition(gx, gy);
-
 
         BodyDef myBodyDefA = new BodyDef();
         myBodyDefA.type = BodyDef.BodyType.DynamicBody;
@@ -259,21 +257,16 @@ public class TCCrane extends Image {
         RevoluteJoint rl = lrevoluteJoint;
         rr.setMotorSpeed(-10);
         rl.setMotorSpeed(10);
-
-
     }
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-
         myBodyATexture.draw(batch, parentAlpha);
         myBodyBTexture.draw(batch, parentAlpha);
         myBodyCTexture.draw(batch, parentAlpha);
         myBodyDTexture.draw(batch, parentAlpha);
         myBodyETexture.draw(batch, parentAlpha);
         myBodyFTexture.draw(batch, parentAlpha);
-
-
     }
 
     @Override
