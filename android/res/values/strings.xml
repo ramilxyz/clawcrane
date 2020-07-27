@@ -2,11 +2,9 @@
 <resources>
 
     <string name="app_name">Claw Crane</string>
-
-        <string name="app_ads_id">ca-app-pub-3940256099942544~3347511713</string>
-        <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
-        <string name="facebook_app_id">291310772098119</string>
-
+    <string name="app_ads_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="facebook_app_id">291310772098119</string>
 <!--    <string name="app_ads_id">ca-app-pub-7417642993084234~9733995654</string>-->
 <!--    <string name="banner_id">ca-app-pub-7417642993084234/1855505633</string>-->
 
