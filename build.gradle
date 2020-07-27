@@ -76,6 +76,7 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
         implementation 'com.google.android.gms:play-services-ads:19.3.0'
+        implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
     }
 }
 
